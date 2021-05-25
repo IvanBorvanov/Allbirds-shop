@@ -1,0 +1,315 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(33,42,47, .9);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    pointer-events: inherit;
+  }
+  
+  /*кнопка*/
+  a.modal-btn {
+    font-weight: 700;
+  }
+  
+  .modal {
+    width: calc(100% - 40px);
+    max-width: 800px;
+    height: calc(100vh - 100px);
+    max-height: 600px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    background: #e5e5e5;
+    transition: 0.2s ease-in-out;
+    z-index: 500;
+  }
+  
+  .modal.active {
+    opacity: 1;
+    pointer-events: inherit;
+  }
+  
+  /*значок закрыть*/
+  .modal .close {
+    widtH: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    transform: translate(-100%, -100%);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .modal .close span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .modal .close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .modal .close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .modal .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .modal .wrapper:after {
+    content: "";
+    font-family: Roboto;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    background: #e5e5e5;
+    color: #000;
+  }
+  
+  .modal .wrapper:before {
+    content: "";
+    font-family: Roboto;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e5e5e5;
+    transition: 0.2s ease-in-out;
+    color: #000;
+  }
+  
+  .modal .wrapper.switch .content {
+    transform: translate(100%, 0);
+  }
+  
+  .modal .wrapper.switch .content .inner {
+    transform: translate(-50%, 0);
+  }
+  
+  .modal .wrapper .content {
+    width: 50%;
+    height: 100%;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.7s cubic-bezier(0.42, 0, 0.02, 1.21);
+    z-index: 100;
+  }
+  
+  .modal .wrapper .content .inner {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    transition: 0.7s cubic-bezier(0.42, 0, 0.02, 1.21);
+    top: 0;
+    left: 0;
+    display: flex;
+  }
+  
+  .modal .wrapper .content .inner .side {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+
+    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .side_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+
+  .side_subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  input[type=password] {
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .modal .options {
+    display: flex;
+  }
+  
+  .modal .options a {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  
+    transition: 0.2s ease-in-out;
+  }
+
+  .modal .options a::after {
+      display: none;
+  }
+  
+  .modal .options {
+    display: flex;
+  }
+  
+  .modal .options a {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin: 0 auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    color: #949494;
+  
+    transition: 0.2s ease-in-out;
+  }
+  
+  .modal .options a:hover {
+    color: #000;
+  }
+  
+  .modal .options a.active {
+    z-index: 100;
+    background: #212A2F;
+    color: #fff;
+  }
+  
+  
+  /*кнопки входа и регистрации*/ 
+  .loginbtn {
+    position: relative;
+    background-color: #212A2F;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: 1px solid #212A2F;
+    cursor: pointer;
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-top: 30px;
+  
+    transition:  0.2s linear;
+  }
+  
+  .loginbtn:hover {
+    background-color: #593c06;
+    border: 1px solid #593c06;
+  }
+  
+  .registerbtn {
+    position: relative;
+    background-color: #212A2F;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: 1px solid #212A2F;
+    cursor: pointer;
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-top: 30px;
+  
+    transition:  0.2s linear;
+  }
+  
+  .registerbtn:hover {
+    background-color: #593c06;
+    border: 1px solid #593c06;
+  }

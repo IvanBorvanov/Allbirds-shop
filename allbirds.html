@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal_main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous">
+    <title>Allbirds shop</title>
+</head>
+<body>
+    
+    <!--intro section-->
+    <div class="intro">
+        <div class="header_bar">
+            <div class="header_menu_left">
+                <a href="#" class="header_a">men</a>
+                <a href="#" class="header_a">women</a>
+            </div>
+            <div class="header_title">allbirds</div>
+            <div class="header_menu_right">
+                <a href="#" class="header_a">Our Materials</a>
+                <a href="#" class="header_a">Stores</a>
+                <a href='#' class='modal-btn header_a' title="Registration">Log In / Sign Up</a>
+
+                <!--модальное окно регистрации-->
+                <div class='modal'>
+                    <div class='close'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class='options'>
+                        <a href='#' class='active'>Log In</a>
+                        <a href='#'>Sign Up</a>
+                    </div>
+                    <div class='wrapper'>
+                        <div class='content'>
+                            <div class='inner'>
+                                <div class='side'>
+                                    <form action="action_page.php">
+                                        <div class="modal_container">
+                                        <h1 class="side_title">Log In</h1>
+                                        <p class="side_subtitle">Already Signed Up?</p>
+                                        <hr>
+                                    
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                    
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                        <button type="submit" class="loginbtn">Log In</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class='side'>
+                                    <form action="action_page.php">
+                                        <div class="modal_container">
+                                        <h1 class="side_title">Register</h1>
+                                    
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                    
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                    
+                                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                        <hr>
+                                    
+                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                                        <button type="submit" class="registerbtn">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class='overlay'></div>
+
+                <a href="#" class="header_a" title="FAQ"><i class="fas fa-question-circle"></i></a>
+                <a href="#" class="header_a" title="basket"><i class="fas fa-shopping-cart"></i></a>
+                
+            </div> 
+        </div>
+        <div class="intro_cont">
+            <div class="intro_cont_inner">
+                <div class="intro_title">Running Shoes Made From Trees</div>
+                <div class="intro_subtitle">New colors to keep you moving</div>
+                <div class="intro_menu">
+                    <button class="intro_btn">shop men</button>
+                    <button class="intro_btn">shop women</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--favorite section-->
+    <div class="fav">
+        <div class="container">
+            <div class="fav_inner">
+                <div class="fav_title">Our Favorites</div>
+                
+                <div class="tab">
+                    <button class="tablinks" onclick="openCategory(event, 'Shoes')" id="defaultOpen">Shoes</button>
+                    <button class="tablinks" onclick="openCategory(event, 'Apparel')">Apparel</button>
+                    <button class="tablinks" onclick="openCategory(event, 'Sport')">Sport</button>
+                </div>
+
+                <!--shoes-->
+                <div id="Shoes" class="tabcontent">
+                    <div class="container">
+
+                        <div class="tab_inner">
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/1.png" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Tree Dasher</div>
+                                <div class="card_subtitle">Daily Running Shoe</div>
+                            </div>
+                        
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/2.png" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Tree Runner</div>
+                                <div class="card_subtitle">Light and Breezy Sneaker</div>
+                            </div>
+
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/3.png" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Wool Runner</div>
+                                <div class="card_subtitle">Cozy Sneaker</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--apparel-->
+                <div id="Apparel" class="tabcontent">
+                    <div class="container">
+
+                        <div class="tab_inner">
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/sweater.jpg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Sweater</div>
+                                <div class="card_subtitle">Daily Sweater</div>
+                            </div>
+                        
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/pants.jpg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Pants</div>
+                                <div class="card_subtitle">Daily Pants</div>
+                            </div>
+
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/cap.jpeg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Headdress</div>
+                                <div class="card_subtitle">Daily Headdress</div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!--sport-->
+                <div id="Sport" class="tabcontent">
+                    <div class="container">
+
+                        <div class="tab_inner">
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/sport_sweater.jpg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Sports jacket</div>
+                                <div class="card_subtitle">Sports coats & jackets</div>
+                            </div>
+                        
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/sport_pants.jpg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">shop women</button>
+                                </div>
+                                <div class="card_title">Sweatpants</div>
+                                <div class="card_subtitle">Sweatpants</div>
+                            </div>
+
+                            <div class="tab_card">
+                                <img class="tab_img" src="assets/img main page/shoes/sport_sneakers.jpg" alt="#">
+                                <div class="card_inner_btns">
+                                    <button class="card_btn">Shop men</button>
+                                    <button class="card_btn">Shop women</button>
+                                </div>
+                                <div class="card_title">Sneakers</div>
+                                <div class="card_subtitle">Football & basketball</div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <img class="img_section" src="assets/img main page/MiSh.png" alt="#">
+
+
+    <!--colorful serction-->
+    <div class="colorful">
+        <div class="container">
+            <div class="colorful_title">Colorful By Nature</div>
+            <div class="colorful_subtitle">Merino Wool Shoes In Limited Edition Hues</div>
+
+            <div class="product_wrapper">
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/mens_shoe.png" alt="">
+                <p class="product_wrapper_title">mens shoe</p></a>
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/mens_apparel.png" alt=""><p class="product_wrapper_title">mens apparel</p></a>
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/women_shoe.png" alt=""><p class="product_wrapper_title">womens shoe</p></a>
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/womens_apparel.png" alt=""><p class="product_wrapper_title">womens apparel</p></a>
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/sport.png" alt=""><p class="product_wrapper_title">sport</p></a>
+                <a href="#" class="product_link"><img src="assets/img main page/colorful/sport.png" alt=""><p class="product_wrapper_title">sport</p></a>
+            </div>
+
+        </div>
+    </div>
+
+    <img class="factory_img" src="assets/img main page/factory.png" alt="">
+
+    <div class="New_arrivals">
+        <div class="container">
+            <div class="new_arrivals_title">Made From Nature, For Nature</div>
+            <div class="new_arrivals_subtitle">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our best chance for a sustainable future.</div>
+
+            <h3>New Arrivals</h3>
+
+            <div class="new_arrivals_product_wrapper">
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/1.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Women's Tree Dasher</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Gaia</h6>
+                    </div>
+                </a>
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/2.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Men's Tree Dasher</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Terra</h6>
+                    </div>
+                </a>
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/3.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Women's Tree Runner</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Aspen</h6>
+                    </div>
+                </a>
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/3.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Women's Tree Dasher</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Gaia</h6>
+                    </div>
+                </a>
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/3.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Women's Tree Dasher</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Gaia</h6>
+                    </div>
+                </a>
+                <a href="#" class="new_arrivals_product_link"><img src="assets/img main page/new_apparel/3.png" alt="">
+                    <div class="new_arrivals_product_link_name">
+                        <h4 class="new_arrivals_product_link_title">Women's Tree Dasher</h4>
+                        <h6 class="new_arrivals_product_link_subtitle">Limited Edition Color, Gaia</h6>
+                    </div>
+                </a>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <img class="snapshot_img" src="assets/img main page/snapshot 2.png" alt="">
+
+    <!--tread-->
+    <div class="tread">
+        <div class="tread_title">Tread Lighter</div>
+        <div class="tread_subtitle">The standard sneaker emits 12.5 kg CO2e. Our average shoe emits 7.6 kg CO2e. Better, but we want to do more. Our goal—have no carbon footprint from the start. The first step to reduce our footprint is to measure it. And even though we’re not at zero yet, we can be. It’s all part of the plan.</div>
+        <div class="tread_btn">Our Sustainability Approach</div>
+    </div>
+
+    <!--stories-->
+    <div class="stories">
+        <div class="container">
+            <div class="stories_title">Stories</div>
+            <div class="stories_item">
+                <div class="stories_card">
+                    <img class="stories_img" src="assets/img main page/Stories/story1.png" alt="">
+                    <div class="stories_subtitle">Run Hard, Tread Light</div>
+                    <div class="stories_text">Meet the Tree Dasher—a performance shoe made with natural materials.</div>
+                </div>
+                <div class="stories_card">
+                    <img class="stories_img" src="assets/img main page/Stories/story2.png" alt="">
+                    <div class="stories_subtitle">Our Doors Are Open</div>
+                    <div class="stories_text">The well-being of our retail communities is top priority as our stores re-open around the globe.</div>
+                </div>
+                <div class="stories_card">
+                    <img class="stories_img" src="assets/img main page/Stories/story3.png" alt="">
+                    <div class="stories_subtitle">We're A Certified B Corp</div>
+                    <div class="stories_text">From the very beginning, the environment has been a stakeholder here.</div>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="footer_form_title">Enter your email to stay in touch!</div>
+            <div class="footer_form">
+                <input type="text" class="email" placeholder="Enter Email" name="email" required>
+                <button type="submit" class="signupbtn">sign up</button>
+            </div>
+
+            <div class="footer_inner">
+                <div class="footer_inner_wrapper">
+                    <div class="footer_inner_wrapper_title">help</div>
+                    <div class="footer_inner_wrapper_list">
+                        <p>1-888-963-8944</p>
+                        <p>1-814-251-9966 (Text)</p>
+                        <p>help@allbirds.com</p>
+                        <p>Returns/Exchanges</p>
+                        <p>FAQ/Contact Us</p></div>
+                </div>
+                <div class="footer_inner_wrapper">
+                    <div class="footer_inner_wrapper_title">shop</div>
+                    <div class="footer_inner_wrapper_list">
+                        <p>Men's Shoes</p>
+                        <p>Women's Shoes</p>
+                        <p>Men's Apparel</p>
+                        <p>Women's Apparel</p>
+                        <p>Socks</p>
+                        <p>Gift Cards</p>
+                        <p>Download the Allbirds App</p>
+                    </div>
+                </div>
+                <div class="footer_inner_wrapper">
+                    <div class="footer_inner_wrapper_title">Company</div>
+                    <div class="footer_inner_wrapper_list">
+                        <p>Our Stores</p>
+                        <p>Our Story</p>
+                        <p>Our Materials</p>
+                        <p>Sustainability</p>
+                        <p>Partnerships</p>
+                        <p>Affiliates</p>
+                        <p>Careers</p>
+                        <p>Press</p>
+                        <p>California Transparency Act</p>
+                        <p>Bulk Orders</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer_privacy">© 2021 Allbirds, Inc. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/modal_main.js"></script>
+    <script src="js/favorite.js"></script>
+
+</body>
+</html>
